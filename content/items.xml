@@ -1,0 +1,3 @@
+<items gfxroot="gfx/items/" version="1">
+	<active name="Black Match Box" description="Begone darkness" gfx="black_match_box.png" maxcharges="8"/>
+</items>

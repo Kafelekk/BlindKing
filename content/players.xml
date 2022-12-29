@@ -1,0 +1,6 @@
+<players bigportraitrooit="gfx/ui/stage/" nameimageroot="gfx/ui/boss/" portraitroot="gfx/ui/boss/" 
+		 root="gfx/characters/costumes/">
+	<player bigportrait="BigBKPortrait.png" keys="1" coins="3" black="2" armor="2" items="689" name="BlindKing" 
+	nameimage="playername_bk.png" portrait="BKportrait.png"
+	skin="character_blind_king.png" skinColor="0"/>
+</players>

@@ -1,0 +1,5 @@
+<ItemPools>
+	<Pool Name="devil">
+		<Item name="Black Match Box" weight="1" DecreaseBy="0.5" RemoveOn="0.1" />
+	</Pool>
+</ItemPools>

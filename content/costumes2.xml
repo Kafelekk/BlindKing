@@ -1,0 +1,4 @@
+<costumes anm2root="gfx/characters/">
+	<costume anm2path="BandageClear.anm2" priority="1" type="none" />
+	<costume anm2path="GlitchedCrown.anm2" priority="99"  type="none" />
+</costumes>
