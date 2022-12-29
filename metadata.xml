@@ -2,7 +2,7 @@
 <metadata>
 	<name>BlindKing</name>
 	<directory>blindking</directory>
-	<description>Simple mod adding 1 character and some items</description>
+	<description>Mod adding 1 character and some items</description>
 	<version>0.1</version>
 	<visibility>Public</visibility>
 	<tag id="Lua"/>
