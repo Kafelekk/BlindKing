@@ -1,6 +1,6 @@
 # Blind King 
 ## Preview of things added with this mod
-<p style="text-align: center;">
+<p align="center">
 Some of the sprites might look bad and thats because it was my first time making pixelarts <br>
 I will fix them in "near" future
 </p>
