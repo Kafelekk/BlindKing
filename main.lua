@@ -4,10 +4,7 @@ local level = game:GetLevel()
 local player = Isaac.GetPlayer(0)
 
 local actiroom = nil
-
-local iscursed = true -- default true 
 local cursecon = nil -- this just stores current floor starting curses
-
 
 --Costume ids
 local GLITCHED_CROWN = Isaac.GetCostumeIdByPath("gfx/characters/GlitchedCrown.anm2")
@@ -45,6 +42,9 @@ BKing:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, BKing.onPlayerInit)
 
 -- adds bandage costume (i dont really remember why i wanted this as costume instead of puting it on character sprite)
 function BKing:OnINIT(player)
+	if player:GetName() == "BlindKing" then
+		iscursed = true -- default true 
+	end
 	local costumeEquipped = false
 	if player:GetName() == "BlindKing" then
 		player:AddNullCostume(BANDAGE)
@@ -108,10 +108,16 @@ local statz = { --relative to isaac stats
 	TEARFLAG = 0,
 	TEARCOLOR = Color(1.0, 1.0, 0.3, 0.7, 0, 0, 0),
 }
+local abyssgaze = false
 function BKing:onCache( player, cacheFlag)
 	if player:GetName() == "BlindKing" then
 		if cacheFlag == CacheFlag.CACHE_DAMAGE then
 			player.Damage = player.Damage + statz.DAMAGE
+			if abyssgaze == true then
+				if debuffcheck.DMGcheck == true then
+					player.Damage = player.Damage - (player.Damage * debufflist.DMGdebuff)
+				end
+			end
 		end
 		if cacheFlag == CacheFlag.CACHE_SHOTSPEED then
 			player.ShotSpeed = player.ShotSpeed + statz.SHOTSPEED
@@ -121,6 +127,11 @@ function BKing:onCache( player, cacheFlag)
 		end
 		if cacheFlag == CacheFlag.CACHE_SPEED then
 			player.MoveSpeed = player.MoveSpeed + statz.SPEED
+			if abyssgaze == true then
+				if debuffcheck.SPEEDcheck == true then
+					player.MoveSpeed = player.MoveSpeed - (player.MoveSpeed * debufflist.SPEEDdebuff)
+				end
+			end
 		end
 		if cacheFlag == CacheFlag.CACHE_LUCK then
 			player.Luck = player.Luck + statz.LUCK
@@ -151,9 +162,8 @@ end
 
 BKing:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, BKing.onUpdate)
 
---BlackMatchBox activ effect
+--BlackMatchBox active effect
 function BKing:ActivateBlackMatchBox (_type, player)
-	local level = game:GetLevel()
 	local curse = level.GetCurses(level)
 	local player = Isaac.GetPlayer(0)
 	actiroom = level:GetCurrentRoomIndex()-- checks for room index in which the item was used
@@ -164,7 +174,6 @@ end
 BKing:AddCallback(ModCallbacks.MC_USE_ITEM, BKing.ActivateBlackMatchBox, IteemId.BLACKMATCHBOX)
 
 function BKing:AgainCursed()
-	local level = game:GetLevel()
 	local currentroom = level:GetCurrentRoomIndex() -- checks for current room index so King can be cursed again
 	if iscursed == false then
 		if currentroom ~= actiroom then

@@ -18,14 +18,15 @@
 >> -50% DMG (Im thinking about deleting this) <br>
 >> -30% MOVEMENT SPEED <br>
 >> -30% TEARS  <br>
->> ONE MAKES YOU LARGE effect (for whole run other effects are only for one floor) <br>
+>> ONE MAKES YOU LARGE effect <br>
+>> (effects are only for current floor) <br>
 
 ### BLIND KING
 - STARTING ITEMS: <br>
 > -GLITCHED CROWN <br>
 > -BLACK MATCH BOX <br>
 > -MORE OPTIONS <br>
-- LIST OF CURSES: (yeah he's forever cursed) <br>
+- LIST OF CURSES: (yeah he's forever cursed (no, black candle doesnt remove curses if you are playing BlindKing)) <br>
 > -CURSE OF BLINDNESS <br>
 > -CURSE OF DARKNESS <br>
 > -CURSE OF THE LOST (NO MINIMAP) <br>
