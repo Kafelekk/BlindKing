@@ -61,10 +61,12 @@ function BKing:PostUpdate()
 	local level = game:GetLevel()
 	local curse = level.GetCurses(level)
 	-- checks if player is cursed
-	if curse < cursecon then
-		iscursed = false
-	elseif curse > cursecon or curse == cursecon then
-		iscursed = true
+	if player:GetName() == "BlindKing" then
+		if curse < cursecon then
+			iscursed = false
+		elseif curse >= cursecon then
+			iscursed = true
+		end
 	end
 	-- add this REALLY COOL looking glitched crown costume (I will make this costume look better in future TwT ...................................................................................................................(maybe))
 	if player:HasCollectible(689) then
@@ -101,7 +103,7 @@ local statz = { --relative to isaac stats
 	SPEED =  0,
 	SHOTSPEED = 0,
 	TEARRANGE = -20,
-	LUCK = 2,
+	LUCK = -5,
 	FLYING = false,
 	TEARFLAG = 0,
 	TEARCOLOR = Color(1.0, 1.0, 0.3, 0.7, 0, 0, 0),
@@ -138,7 +140,7 @@ end
 BKing:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, BKing.onCache)
 --
 
--- Adds the best active item (like seriously THE BEST ACTIVE ITEM ever created)
+-- Adds the best active item
 function BKing:onUpdate(player)
 	if game:GetFrameCount() == 1 then
 		if player:GetName() == "BlindKing" then
