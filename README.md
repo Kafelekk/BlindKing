@@ -44,6 +44,6 @@
 - (i dont know how to balance t character so he wouldnt be too hard and thats why im not writing his stats for now)
 
 <p align="center">
-Some of the sprites in this mod (especialy portraits) might look bad and thats because it was my first time making <br>
-pixelarts I will fix them in "near" future
+Some of the sprites in this mod (especialy portraits) might look bad and thats because it was my first time <br>
+making pixelarts I will fix them in "near" future
 </p>
