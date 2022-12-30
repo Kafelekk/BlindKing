@@ -1,9 +1,6 @@
 # Blind King 
 ## Preview of things added with this mod
-<p align="center">
-Some of the sprites might look bad and thats because it was my first time making pixelarts <br>
-I will fix them in "near" future
-</p>
+
 ### ITEMS 
 - BLACK MATCH BOX -- ACTIVE ITEM  <br>
 > Removes curses (only for the current room if you are playing blind king) <br>
@@ -45,3 +42,8 @@ I will fix them in "near" future
 
 ### T BLIND KING (WIP)
 - (i dont know how to balance t character so he wouldnt be too hard and thats why im not writing his stats for now)
+
+<p align="center">
+Some of the sprites in this mod (especialy portraits) might look bad and thats because it was my first time making <br>
+pixelarts I will fix them in "near" future
+</p>
