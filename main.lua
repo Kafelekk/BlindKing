@@ -1,4 +1,4 @@
-2local BKing = RegisterMod("Blind_King", 1)
+local BKing = RegisterMod("Blind_King", 1)
 local game = Game()
 local level = game:GetLevel()
 local player = Isaac.GetPlayer(0)
