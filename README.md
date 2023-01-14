@@ -50,5 +50,5 @@ making pixelarts I will fix them in "near" future
 </p>
 
 ### BUGS 
- - When exiting the game and reentering game doesnt evaluate curses witch leaves cursecon varibile empty wich results in breaking active item for current floor, doesnt curse you again (temporary fix -- cursecon default value =  69)
+ - When exiting the game and reentering game doesnt evaluate curses which leaves cursecon varibile empty resulting in breaking active item for current floor, doesnt curse you again (temporary fix -- cursecon default value =  69 so that you get at least Blindking curses)
  

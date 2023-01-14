@@ -1,10 +1,10 @@
-local BKing = RegisterMod("Blind_King", 1)
+2local BKing = RegisterMod("Blind_King", 1)
 local game = Game()
 local level = game:GetLevel()
 local player = Isaac.GetPlayer(0)
 
 local actiroom = nil
-local cursecon = nil -- this just stores current floor starting curses
+local cursecon = 69 -- this just stores current floor starting curses
 
 --Costume ids
 local GLITCHED_CROWN = Isaac.GetCostumeIdByPath("gfx/characters/GlitchedCrown.anm2")
@@ -40,7 +40,7 @@ end
 
 BKing:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, BKing.onPlayerInit)
 
--- adds bandage costume (i dont really remember why i wanted this as costume instead of puting it on character sprite)
+-- adds bandage costume (i dont really remember why i wanted this as costume instead of puting it on character sprite, i guess im dumb)
 function BKing:OnINIT(player)
 	if player:GetName() == "BlindKing" then
 		iscursed = true -- default true 
@@ -68,7 +68,7 @@ function BKing:PostUpdate()
 			iscursed = true
 		end
 	end
-	-- add this REALLY COOL looking glitched crown costume (I will make this costume look better in future TwT ...................................................................................................................(maybe))
+	-- add this REALLY COOL looking glitched crown costume (I will make this costume look better in future TwT ... (maybe) )
 	if player:HasCollectible(689) then
 		if Hasthisiteem.Glitchedcrown ~= true then
 			player:AddNullCostume(GLITCHED_CROWN)
@@ -81,8 +81,8 @@ function BKing:PostUpdate()
 end
 BKing:AddCallback(ModCallbacks.MC_POST_UPDATE, BKing.PostUpdate)
 
---Great thanks to the guy from reddit modding community who helped me with solving error in this simple function
---PS. Im so dumb
+--Great thanks to the guy from reddit modding community who helped me with solving error
+--PS. Again thanks because i would probably spend a lot of time on this shit
 function Curses:onEval(CurseFlags) 
 	local player = Isaac.GetPlayer(0)
 	if player:GetName() == "BlindKing" then
@@ -152,6 +152,7 @@ BKing:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, BKing.onCache)
 --
 
 -- Adds the best active item
+-- not really
 function BKing:onUpdate(player)
 	if game:GetFrameCount() == 1 then
 		if player:GetName() == "BlindKing" then
@@ -162,7 +163,7 @@ end
 
 BKing:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, BKing.onUpdate)
 
---BlackMatchBox active effect
+	--BlackMatchBox active effect
 function BKing:ActivateBlackMatchBox (_type, player)
 	local curse = level.GetCurses(level)
 	local player = Isaac.GetPlayer(0)
