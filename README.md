@@ -48,3 +48,7 @@
 Some of the sprites in this mod (especially portraits) might look bad and thats because it was my first time <br>
 making pixelarts I will fix them in "near" future
 </p>
+
+### BUGS 
+ - When exiting the game and reentering game doesnt evaluate curses witch leaves cursecon varibile empty wich results in breaking active item for current floor, doesnt curse you again (temporary fix -- cursecon default value =  69)
+ 
