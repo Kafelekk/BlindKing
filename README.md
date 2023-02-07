@@ -50,10 +50,10 @@
 ### DEV INFO
 <p align="center">
 Some of the sprites in this mod (especially portraits) might look bad and thats because it was my first time <br>
-making Isaac styled pixelarts I will fix them in "near" future, anyway im still working on this mod but I dont really hava a lot of <br> 
-free time to make a 12h straight coding session like i did when i was starting modding isaac and then making this mod (for me its the <br> 
-best way to code effectively otherwise my brain just turn off the moment I stand up form my PC) but I will try <br> 
-to update this mod at least once a month at least fixing some of the sprites <br>
+making Isaac styled pixelarts I will fix them in "near" future, anyway im still working on this mod but I dont really <br>
+have a lot of free time to make a 12h straight coding session like i did when i was starting modding isaac and then <br> 
+making this mod (for me its the best way to code effectively otherwise my brain just turn off the moment I stand up <br>
+form my PC) but I will try to update this mod at least once a month at least fixing some of the sprites <br>
  <br>
  <br>
 Thanks for trying out my mod and good luck
