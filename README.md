@@ -1,11 +1,11 @@
-# Blind King 
+﻿# Blind King 
 ## Preview of things added with this mod
 
 ### ITEMS 
 - BLACK MATCH BOX -- ACTIVE ITEM  <br>
 > Removes curses (only for the current room if you are playing blind king) <br>
 > 8 charges <br>
-> Deal 1 heart of DMG upon usage (doesnt decrease chances) <br>
+> Deal 1 heart of DMG upon usage (doesnt decrease chances for 👼 and 👿 Room) <br>
 > Worse version of black candle <br>
 
 - BLACK MATCH STICK -- PICK UP (WIP) <br>
@@ -26,7 +26,7 @@
 > -GLITCHED CROWN <br>
 > -BLACK MATCH BOX <br>
 > -MORE OPTIONS <br>
-- LIST OF CURSES: (yeah he's forever cursed (no, black candle doesnt remove curses if you are playing BlindKing)) <br>
+- LIST OF CURSES: (forever cursed (no, black candle doesnt remove curses if you are playing BlindKing)) <br>
 > -CURSE OF BLINDNESS <br>
 > -CURSE OF DARKNESS <br>
 > -CURSE OF THE LOST (NO MINIMAP) <br>
@@ -42,13 +42,13 @@
 
 
 ### T BLIND KING (WIP)
-- (i dont know how to balance t character so he wouldnt be too hard and thats why im not writing his stats for now)
+- (For now I have some issues balancing t character so he wouldnt be available for some time)
 
 <p align="center">
 Some of the sprites in this mod (especially portraits) might look bad and thats because it was my first time <br>
-making pixelarts I will fix them in "near" future
+making Isaac styled pixelarts I will fix them in "near" future
 </p>
 
 ### BUGS 
- - When exiting the game and reentering game doesnt evaluate curses which leaves cursecon varibile empty resulting in breaking active item for current floor, doesnt curse you again (temporary fix -- cursecon default value =  69 so that you get at least Blindking curses)
+ - removeing curses for c floor when reloading mod (temporary fixed, at least gives curses that BKing have by default(I will think of a way to save all curses when i will be bored of coding "important stuff"))
  

@@ -1,10 +1,10 @@
-2local BKing = RegisterMod("Blind_King", 1)
+local BKing = RegisterMod("Blind_King", 1)
 local game = Game()
 local level = game:GetLevel()
 local player = Isaac.GetPlayer(0)
 
 local actiroom = nil
-local cursecon = 69 -- this just stores current floor starting curses
+local cursecon = 69 -- this just stores current floor starting curses, or deafault 69 so i dont need to care about one small bug which ceased to exist after assiging 69 as deafault value
 
 --Costume ids
 local GLITCHED_CROWN = Isaac.GetCostumeIdByPath("gfx/characters/GlitchedCrown.anm2")
@@ -40,7 +40,7 @@ end
 
 BKing:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, BKing.onPlayerInit)
 
--- adds bandage costume (i dont really remember why i wanted this as costume instead of puting it on character sprite, i guess im dumb)
+-- adds bandage costume (i dont really remember why i wanted this as costume instead of puting it on character sprite, i guess i should at least note some of my ideas)
 function BKing:OnINIT(player)
 	if player:GetName() == "BlindKing" then
 		iscursed = true -- default true 
@@ -68,7 +68,7 @@ function BKing:PostUpdate()
 			iscursed = true
 		end
 	end
-	-- add this REALLY COOL looking glitched crown costume (I will make this costume look better in future TwT ... (maybe) )
+	-- add this REALLY COOL looking glitched crown costume (I will make this costume look better in future TwT ... (I will probably forget about this "trival" matter) )
 	if player:HasCollectible(689) then
 		if Hasthisiteem.Glitchedcrown ~= true then
 			player:AddNullCostume(GLITCHED_CROWN)
@@ -81,8 +81,7 @@ function BKing:PostUpdate()
 end
 BKing:AddCallback(ModCallbacks.MC_POST_UPDATE, BKing.PostUpdate)
 
---Great thanks to the guy from reddit modding community who helped me with solving error
---PS. Again thanks because i would probably spend a lot of time on this shit
+--Great thanks to the guy from reddit modding community who helped me with solving error (i was dumb back then, not that something change but... yeah)
 function Curses:onEval(CurseFlags) 
 	local player = Isaac.GetPlayer(0)
 	if player:GetName() == "BlindKing" then
@@ -97,7 +96,7 @@ end
 
 BKing:AddCallback(ModCallbacks.MC_POST_CURSE_EVAL, Curses.onEval)
 
---stolen from yt tutorial i guess
+--stolen from yt tutorial
 local statz = { --relative to isaac stats
 	DAMAGE = 1.5,
 	SPEED =  0,
@@ -178,11 +177,10 @@ function BKing:AgainCursed()
 	local currentroom = level:GetCurrentRoomIndex() -- checks for current room index so King can be cursed again
 	if iscursed == false then
 		if currentroom ~= actiroom then
-			level:AddCurse(cursecon, nil)
-			-- yo I spend so long trying to get a hold of how to use this AddCurse and even now i dont really 
-			-- understand it but it works so whatever
+			level:AddCurse(cursecon, false)
 		end
 	end
 end
 BKing:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, BKing.AgainCursed)
 --
+			-- i guess coding this whole s**t would be easier if i had installed VS api for modding of issac but my stubbornness knows no bounds
