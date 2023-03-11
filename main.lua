@@ -183,4 +183,3 @@ function BKing:AgainCursed()
 end
 BKing:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, BKing.AgainCursed)
 --
-			-- i guess coding this whole s**t would be easier if i had installed VS api for modding of issac but my stubbornness knows no bounds
