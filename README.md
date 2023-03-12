@@ -26,7 +26,7 @@
 > -GLITCHED CROWN <br>
 > -BLACK MATCH BOX <br>
 > -MORE OPTIONS <br>
-- LIST OF CURSES: (Forever cursed (no, black candle doesnt remove curses for BlindKing)) <br>
+- LIST OF CURSES: (Forever cursed) <br>
 > -CURSE OF BLINDNESS <br>
 > -CURSE OF DARKNESS <br>
 > -CURSE OF THE LOST <br>
