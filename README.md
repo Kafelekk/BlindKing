@@ -8,10 +8,10 @@
 > Deal 1 heart of DMG upon usage (doesnt decrease chances for 👼 and 👿 Rooms) <br>
 > Worse version of black candle <br>
 
-- BLACK MATCH STICK -- PICK UP (WIP__Not Yet Implemented) <br>
+- BLACK MATCH STICK -- PICK UP (WIP) <br>
 > Removes curses <br>
 
-- ABYSS GEM -- TRINKET (WIP__Not Yet Implemented) <br>
+- ABYSS GEM -- TRINKET (WIP) <br>
 > 100% to remove curse on new level <br>
 > Has 75% chance to apply debuff when removing curse <br>
 >> Debuff list: <br>
