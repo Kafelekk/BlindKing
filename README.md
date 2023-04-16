@@ -1,5 +1,4 @@
 # Blind King 
-## Preview of things added by this mod
 
 ### ITEMS 
 - BLACK MATCH BOX -- ACTIVE ITEM  <br>
