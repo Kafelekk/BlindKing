@@ -8,10 +8,10 @@
 > Deal 1 heart of DMG upon usage (doesnt decrease chances for 👼 and 👿 Rooms) <br>
 > Worse version of black candle <br>
 
-- BLACK MATCH STICK -- PICK UP (WIP__Not Yet Implemented) <br>
+- BLACK MATCH STICK -- PICK UP (WIP) <br>
 > Removes curses <br>
 
-- ABYSS GEM -- TRINKET (WIP__Not Yet Implemented) <br>
+- ABYSS GEM -- TRINKET (WIP) <br>
 > 100% to remove curse on new level <br>
 > Has 75% chance to apply debuff when removing curse <br>
 >> Debuff list: <br>
@@ -26,10 +26,10 @@
 > -GLITCHED CROWN <br>
 > -BLACK MATCH BOX <br>
 > -MORE OPTIONS <br>
-- LIST OF CURSES: (Forever cursed (no, black candle doesnt remove curses for BlindKing)) <br>
+- LIST OF CURSES: (Forever cursed) <br>
 > -CURSE OF BLINDNESS <br>
 > -CURSE OF DARKNESS <br>
-> -CURSE OF THE LOST (NO MINIMAP) <br>
+> -CURSE OF THE LOST <br>
 - STATS <br>
 > 1 SOUL HEART <br>
 > 1 BLACK HEART <br>
@@ -42,20 +42,4 @@
 
 
 ### T BLIND KING (WIP)
-- For now I have some issues balancing t character so he wouldnt be available for some time
-
-### BUGS 
- - Removeing curses for c floor when reloading mod (temporary fixed, at least gives curses that BKing have by default(I will think of a way to save all curses when i will be bored of coding "important stuff"))
- 
-### DEV INFO
-<p align="center">
-Some of the sprites in this mod (especially portraits) might look bad and thats because it was my first time <br>
-making Isaac styled pixelarts I will fix them in "near" future, anyway im still working on this mod but I dont really <br>
-have a lot of free time to make a 12h straight coding session like i did when i was starting modding isaac and then <br> 
-making this mod (for me its the best way to code effectively otherwise my brain just turn off the moment I stand up <br>
-form my PC) but I will try to update this mod at least once a month at least fixing some of the sprites <br>
- <br>
- <br>
-Thanks for trying out my mod and good luck
-</p>
  
