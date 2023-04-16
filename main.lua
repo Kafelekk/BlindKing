@@ -4,14 +4,16 @@ local level = game:GetLevel()
 local player = Isaac.GetPlayer(0)
 
 local actiroom = nil
-local cursecon = 69 -- stores current floor starting curses, or deafault 69(curse of blind, curse of the lost, curse of darkness)
 
+local cursecon = 69 -- stores current floor starting curses, or deafault 69(curse of blind, curse of the lost, curse of darkness)
 
 --Costume ids
 local GLITCHED_CROWN = Isaac.GetCostumeIdByPath("gfx/characters/GlitchedCrown.anm2")
 local BANDAGE = Isaac.GetCostumeIdByPath("gfx/characters/BandageClear.anm2")
 
-local gcCostumeEquipped = false
+local Hasthisitem = {
+	Glitchedcrown = false
+}
 --Get item ids
 local ItemId = {
 	GLITCHEDCROWN = Isaac.GetItemIdByName("Glitched Crown"),
@@ -24,6 +26,7 @@ function BKing:OnINIT(player)
 		local curse = level.GetCurses(level)
 		local iscursed = true -- default true
 		player:AddNullCostume(BANDAGE)
+		player:AddNullCostume(GLITCHED_CROWN)
 	end
 end
 BKing:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, BKing.OnINIT)
@@ -34,13 +37,13 @@ function BKing:PostUpdate()
 	local level = game:GetLevel()
 	-- adds glitched crown costume 
 	if player:HasCollectible(689) then 
-		if gcCostumeEquipped ~= true then
+		if Hasthisitem.Glitchedcrown ~= true then
 			player:AddNullCostume(GLITCHED_CROWN)
-			gcCostumeEquipped = true
+			Hasthisitem.Glitchedcrown = true
 		end
-	elseif gcCostumeEquipped == true and player:HasCollectible(689) == false then
+	elseif Hasthisitem.Glitchedcrown == true and player:HasCollectible(689) == false then
 		player:TryRemoveNullCostume(GLITCHED_CROWN)
-		gcCostumeEquipped = false
+		Hasthisitem.Glitchedcrown = false
 	end
 end
 BKing:AddCallback(ModCallbacks.MC_POST_UPDATE, BKing.PostUpdate)
@@ -48,12 +51,14 @@ BKing:AddCallback(ModCallbacks.MC_POST_UPDATE, BKing.PostUpdate)
 function BKing:onEval(CurseFlags) 
 	local player = Isaac.GetPlayer(0)
 	if player:GetName() == "BlindKing" then
+		if cursecon ~= CurseFlags then --
+		cursecon = 69 -- resets cursecon so last floor curses doesnt apply on new floor
 		CurseFlags = CurseFlags | cursecon
 		cursecon = CurseFlags
 		iscursed = true
 		return CurseFlags
+		end
 	end
-	return CurseFlags
 end
  
 BKing:AddCallback(ModCallbacks.MC_POST_CURSE_EVAL, BKing.onEval)
@@ -72,7 +77,7 @@ local stats = { --relative to isaac stats
 function BKing:onUpdate(player)
 	if game:GetFrameCount() == 1 then
 		if player:GetName() == "BlindKing" then
-			player:AddCollectible(ItemId.BLACKMATCHBOX, 8, true, ActiveSlot.SLOT_PRIMARY)
+			player:SetPocketActiveItem(ItemId.BLACKMATCHBOX)
 		end
 	end
 end
@@ -91,10 +96,13 @@ end
 BKing:AddCallback(ModCallbacks.MC_USE_ITEM, BKing.ActivateBlackMatchBox, ItemId.BLACKMATCHBOX)
 
 function BKing:AgainCursed()
-	local currentroom = level:GetCurrentRoomIndex() -- checks for current room index
-	if iscursed == false then
-		if currentroom ~= activationroom then
-			level:AddCurse(cursecon, false)
+	local player = Isaac.GetPlayer(0)
+	if player:GetName() == "BlindKing" then
+		local currentroom = level:GetCurrentRoomIndex() -- checks for current room index
+		if iscursed == false then
+			if currentroom ~= activationroom then
+				level:AddCurse(cursecon, false)
+			end
 		end
 	end
 end

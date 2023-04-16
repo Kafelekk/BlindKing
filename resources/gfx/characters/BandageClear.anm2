@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="28.12.2022 12:14:56" Version="140" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="10.04.2023 17:28:29" Version="141" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="BandageClear.png" Id="0"/>
