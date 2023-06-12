@@ -1,6 +1,10 @@
 <players nameimageroot="gfx/ui/boss/" portraitroot="gfx/ui/stage/" root="gfx/characters/costumes/">
 	<player keys="1" coins="3" black="2" armor="2" 
 	items="689, 414" name="BlindKing" 
-	nameimage="playername_bk.png" portrait="BKportrait.png"
+	nameimage="playername_bk.png" portrait="bk_portrait.png"
 	skin="character_blind_king.png" skinColor="0"/>
+	
+	<player hp="0" black="6" bSkinParent="BlindKing" name="BlindKingB"
+	nameimage="playername_bk_b.png" portrait="bk_portrait_b.png" 
+	skin="character_blind_king_b.png" skinColor="-1"/>
 </players>
