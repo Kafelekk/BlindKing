@@ -43,14 +43,18 @@
 ### T BLIND KING (WIP)
 - For now I have some issues balancing t character so he wouldnt be available for some time
 
+### BUGS 
+ - Removeing curses for c floor when reloading mod (temporary fixed, at least gives curses that BKing have by default(I will think of a way to save all curses when i will be bored of coding "important stuff"))
  
 ### DEV INFO
 <p align="center">
 Some of the sprites in this mod (especially portraits) might look bad and thats because it was my first time <br>
-making Isaac styled pixelarts I will fix them in "near" future, anyway im still working on this mod and I <br>
-will try to update this mod at least once a month <br>
+making Isaac styled pixelarts I will fix them in "near" future, anyway im still working on this mod but I dont really <br>
+have a lot of free time to make a 12h straight coding session like i did when i was starting modding isaac and then <br> 
+making this mod (for me its the best way to code effectively otherwise my brain just turn off the moment I stand up <br>
+form my PC) but I will try to update this mod at least once a month at least fixing some of the sprites <br>
  <br>
  <br>
-Thanks for playing my mod <3
+Thanks for trying out my mod and good luck
 </p>
  
